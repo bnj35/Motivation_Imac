@@ -1,0 +1,80 @@
+@import "../utils/animations";
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: $nav-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset -13px 0px 16px -8px rgba(255,255,255,0.8);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+
+
+  .logo {
+    width: $nav-width;
+    height: $nav-width;
+    animation: scaleRotate 4s ease-in-out infinite alternate;
+    cursor:pointer;
+
+    &:last-child {
+      width: $nav-width * 0.8;
+      height: $nav-width * 0.8;
+      padding: 0.2rem;
+      align-self: flex-end;
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+
+  ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+            &.active {
+              transition: all 1s ease-in-out;
+              font-weight: 500;
+              text-decoration: underline;
+        a {
+          transition: all 1s ease-in-out;
+          color: $white;
+          opacity: 1;
+        }
+      }
+    }
+
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $grey;
+          opacity: 0.5;
+          font-family: $text;
+          font-weight: $font-light;
+          font-size: 1.2rem;
+          text-decoration: none;
+        }
+        }
+        
+
+    }
+

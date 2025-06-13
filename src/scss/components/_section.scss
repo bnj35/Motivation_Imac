@@ -1,0 +1,79 @@
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+
+        h2{
+        font-size: 2rem;
+        font-family: $text;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 1rem;
+        font-family: $text;
+        margin-bottom: 2rem;
+    }
+}
+
+#timelineSection{
+    height: 400vh;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-block: 5rem !important;
+
+    .timelineSectionHeader{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding-inline: 5rem;
+    }
+}
+
+#motivationSection{
+    padding: 15rem;
+    gap: 10rem;
+    height: 100%;
+    .motivationGauche{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap:1rem;
+    }
+    .motivationDroite{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        gap:1rem;
+    }
+
+    h3{
+        font-size: 2rem;
+        font-family: $text;
+    }
+    p{
+        font-size: 1rem;
+        font-family: $text;
+        width: 500px;
+    }
+}
+
+#projectSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 10rem;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+}
