@@ -118,12 +118,9 @@ void main() {
     revealHsl.z = (revealHsl.z - 0.5) * contrastFactor + 0.5;
     revealHsl.z = clamp(revealHsl.z, 0.0, 1.0);
 
-
     vec3 revealDesaturated = hslToRgb(revealHsl);
 
     vec2 aspect = vec2(resolution.x / resolution.y, 1.0);
-
-    // vec2 aspect = vec2(resolution.x / resolution.y, 1.0);
 
     float displacement = fbm(vUv * 25.0, 4);
     vec2 disp = vec2(displacement) * aspect * 0.005;

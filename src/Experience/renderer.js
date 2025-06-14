@@ -49,10 +49,10 @@ export default class Renderer {
   }
 
   update() {
-  if (this.reveal && this.reveal.realShcene) {
+
 
             this.instance.setRenderTarget(this.reveal.sourceTarget)
-            this.instance.render(this.scene, this.reveal.camera)
+            this.instance.render(this.scene, this.camera.instance)
 
             this.instance.setRenderTarget(this.reveal.targetA)
             this.instance.render(this.reveal.fboScene, this.reveal.fboCamera)
@@ -69,12 +69,7 @@ export default class Renderer {
             // Swap targets
             let temp = this.reveal.targetA
             this.reveal.targetA = this.reveal.targetB
-            this.reveal.targetB = temp
+            this.reveal.targetB = temp;
 
-        } else {
-            // Normal rendering without post-processing
-            this.instance.setRenderTarget(null)
-            this.instance.render(this.scene, this.camera.instance)
-        }
   }
 }
